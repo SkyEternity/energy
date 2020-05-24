@@ -1,0 +1,38 @@
+			<!-- <view class="view_energy">
+            1111111
+				<block wx:for="{{myList}}" wx:for-index="idx" wx:for-item="itm" wx:key='idx'>
+					<block wx:if="{{itm.realItem}}">
+						<view class="view_energy_list" animation="{{itm.anima}}"  id='{{idx}}' bindtap="bindTab"  style="{{itm.styleObject}}">
+							<block wx:if="{{itm.isShow}}" >
+								<text class="energy_title">{{itm.num}}</text>
+								<view class="energy_tips">{{itm.title}}</view>
+							</block>
+						</view>
+					</block>
+					<block wx:else>
+						<view class="view_energy_list">
+						</view>
+					</block>
+				</block>
+			</view>
+      <view class="view_collect">
+				<image id="my_collect"  src="http://image.51what.cn/public/upload/20190916/5e053c8276102f544bb6c403028ef601.png"
+				 class="img_collect"> </image>
+			</view> -->
+<view class="view_energy">
+
+    <!-- 能量球 -->
+    <view class="energy_all">
+        <view class="item_energy"  wx:for="{{energyList}}" wx:key="index" style="{{item.styleObject}}" bindtap="pullEnergy" data-i="{{index}}">
+            <text class="energy_title" style="{{item.childStyle}}">{{item.num}}</text>
+            <view class="energy_tips">{{item.title}}</view>
+        </view>
+    </view>
+    <!-- 收取能量 -->
+
+    <view class="get_integral" bindtap="pullAllEnergy">
+		<image src="http://image.51what.cn/public/upload/20190916/5e053c8276102f544bb6c403028ef601.png" class="img_collect"> </image>
+    </view>
+</view>
+
+<view class="sum">总数：{{sum}}</view>
